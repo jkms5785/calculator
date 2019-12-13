@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+            width: 100%;
+            height: 800px;
+            position: relative;
+        }
+
+        .wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .cont {
+            display: flex;
+        }
+
+        .box {
+            width: 128px;
+            height: 56px;
+            margin: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            border-radius: 10px;
+            background-color: #383838;
+        }
+
+        .func {
+            background-color: #FF9803;
+        }
+
+        .c {
+            background-color: #B2B2B2;
+            color: white;
+        }
+
+        .result {
+            width: 400px;
+            height: 56px;
+            box-sizing: border-box;
+            border: 8px solid black;
+            background-color: black;
+            justify-content: flex-end;
+            font-size: 28px;
+        }
+
+        .zero {
+            width: 264px;
+        }
+
+        .opacity {
+            animation: blink 0.1s;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 1.0;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
+
+            100% {
+                opacity: 1.0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="cont">
+            <div id="js-result" class="box result">0</div>
+            <div id="js-reset" class="box c">c</div>
+        </div>
+        <div class="cont">
+            <div class="js-num box">7</div>
+            <div class="js-num box">8</div>
+            <div class="js-num box">9</div>
+            <div class="js-ftn box func">+</div>
+        </div>
+        <div class="cont">
+            <div class="js-num box">4</div>
+            <div class="js-num box">5</div>
+            <div class="js-num box">6</div>
+            <div class="js-ftn box func">-</div>
+        </div>
+        <div class="cont">
+            <div class="js-num box">1</div>
+            <div class="js-num box">2</div>
+            <div class="js-num box">3</div>
+            <div class="js-ftn box func">*</div>
+        </div>
+        <div class="cont">
+            <div class="js-num box zero">0</div>
+            <div class="js-ftn box">=</div>
+            <div class="js-ftn box func">/</div>
+        </div>
+    </div>
+    <script src="09-1.js"></script>
+</body>
+
+</html>
